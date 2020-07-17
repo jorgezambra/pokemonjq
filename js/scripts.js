@@ -65,14 +65,14 @@ var pokemonRepository = (function () {
         var imageElement = $('<img class="modal-img">');
         imageElement.attr('src', item.imageUrl);
 
-        var heightElement = $('<p>' + 'height : ' + item.height + 'm' '</p>');
+        var heightElement = $('<p>' + 'height : ' + item.height + 'm' + '</p>');
 
         modal.append(closeButtonElement);
         modal.append(nameElement);
         modal.append(imageElement);
         modal.append(heightElement);
 
-        $modalContainer.appendChild(modal);
+        $modalContainer.append(modal);
         $modalContainer.addClass('is-visible');
     }
 
