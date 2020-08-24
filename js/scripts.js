@@ -16,7 +16,9 @@ var pokemonRepository = (function () {
     var $button = $('<button type="button" class="btn btn-outline-dark btn-lg btn-block list-group-item-action" data-target="#exampleModal" data-toggle="modal">' + pokemon.name + '</button>');
     $listItem.append($button);
     $pokemonList.append($listItem);
-    $button.on('click', function (event) {showDetails(pokemon)
+    $button.on('click', function (event) {
+      event.preventDefault();
+      showDetails(pokemon)
     });
   }
 
@@ -30,7 +32,9 @@ var pokemonRepository = (function () {
           add(pokemon);
         });
       }).catch(function (e) {
+        /* eslint-disable no-console */
         console.error(e);
+        /* eslint-enable no-console */
       })
     }
 
@@ -40,7 +44,9 @@ var pokemonRepository = (function () {
           item.imageUrl = details.sprites.front_default;
           item.height = details.height;
       }).catch(function (error) {
+        /*eslint-disable no-console */
         console.error(error);
+        /*eslint-enable no-console */
       });
     }
 
