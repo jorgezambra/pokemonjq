@@ -16,8 +16,8 @@ var pokemonRepository = (function () {
     var $button = $(`
       <button type="button"
       class="btn btn-outline-dark btn-lg btn-block list-group-item-action"
-      data-target="#exampleModal" data-toggle="modal">
-      ` + pokemon.name + `
+      data-target="#exampleModal" data-toggle="modal">`
+      + pokemon.name + `
       </button>`
     );
     $listItem.append($button);
