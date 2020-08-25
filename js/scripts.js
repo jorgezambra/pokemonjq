@@ -13,7 +13,13 @@ var pokemonRepository = (function () {
   function addListItem(pokemon) {
     var $pokemonList = $('ul');
     var $listItem = $('<li>');
-    var $button = $('<button type="button" class="btn btn-outline-dark btn-lg btn-block list-group-item-action" data-target="#exampleModal" data-toggle="modal">' + pokemon.name + '</button>');
+    var $button = $(`
+      <button type="button"
+      class="btn btn-outline-dark btn-lg btn-block list-group-item-action"
+      data-target="#exampleModal" data-toggle="modal">'
+      `+ pokemon.name + `
+      </button>`
+    );
     $listItem.append($button);
     $pokemonList.append($listItem);
     $button.on('click', function (event) {
